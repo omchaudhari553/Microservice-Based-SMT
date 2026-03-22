@@ -1,88 +1,189 @@
- Microservices Student Management System
-📌 Project Overview
+# 🎓 Student Management System (Spring Boot Microservices)
 
-This project is a Microservices-based Student Management System built using Spring Boot and Spring Cloud.
-The system is designed using real-world microservices architecture including service discovery, API gateway, authentication, circuit breaker, centralized configuration, logging, and monitoring.
+<!-- BADGES START -->
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)
+![Spring Cloud](https://img.shields.io/badge/Spring%20Cloud-Microservices-green?style=for-the-badge)
+![Spring Security](https://img.shields.io/badge/Spring%20Security-JWT-6DB33F?style=for-the-badge)
+![JWT](https://img.shields.io/badge/JWT-Authentication-orange?style=for-the-badge)
+![MySQL](https://img.shields.io/badge/MySQL-Database-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![Eureka](https://img.shields.io/badge/Eureka-Service%20Discovery-blue?style=for-the-badge)
+![Feign](https://img.shields.io/badge/OpenFeign-InterService-red?style=for-the-badge)
+![Resilience4j](https://img.shields.io/badge/Circuit%20Breaker-Resilience4j-yellow?style=for-the-badge)
+![Docker](https://img.shields.io/badge/Docker-Containerization-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+<!-- BADGES END -->
 
-This project demonstrates distributed system architecture, secure authentication, inter-service communication, and fault tolerance, making it suitable for Java Developer interviews and resume projects.
+---
 
-🏗️ Microservices Architecture
+# 📘 Project Overview
 
-The system consists of the following microservices:
+The **Student Management System** is a scalable backend application built using **Java + Spring Boot Microservices** with a clean layered architecture.  
+This project demonstrates **service discovery, API gateway routing, inter-service communication, circuit breaker, centralized configuration, authentication, logging, and monitoring**.
 
-Service	Description
-Eureka Server	Service registry for service discovery
-API Gateway	Single entry point for all client requests
-Config Server	Centralized configuration management
-Student Service	Manage student data
-Course Service	Manage course data
-Enrollment Service	Manage student course enrollment
-User Service	Manage users
-Auth Service	Authentication and JWT token generation
-🛠️ Tech Stack
-Backend
+This system simulates a **real-world distributed microservices architecture** and showcases **secure authentication, fault tolerance, and service communication**, making it suitable for **Java Developer interviews and resume projects**.
 
-Java 17
+---
 
-Spring Boot
+# 🧰 Technologies Used
 
-Spring Cloud
+## Backend
+- Java
+- Spring Boot
+- Spring Data JPA
+- Hibernate
+- REST APIs
 
-Spring Security
+## Microservices & Cloud
+- Spring Cloud
+- Eureka Service Discovery
+- Spring Cloud Gateway
+- OpenFeign (Inter-service communication)
+- Resilience4j Circuit Breaker
+- Spring Cloud Config Server
 
-JWT Authentication
+## Security
+- Spring Security
+- JWT Authentication
+- Role-Based Access Control (ADMIN / STUDENT)
 
-Spring Data JPA
+## Database
+- MySQL
 
-Hibernate
+## Logging & Monitoring
+- Spring Cloud Sleuth
+- Zipkin
+- Prometheus
+- Grafana
 
-MySQL
+## DevOps
+- Docker
+- Docker Compose
 
-Microservices Tools
+---
 
-Eureka Service Discovery
+# 🎯 Key Highlights
 
-Spring Cloud Gateway
+- Built Microservices Architecture using Spring Boot & Spring Cloud
+- Implemented Service Discovery using Eureka
+- Configured API Gateway for routing
+- Implemented JWT-based authentication and role-based authorization
+- Used OpenFeign for inter-service communication
+- Implemented Circuit Breaker using Resilience4j
+- Used Centralized Configuration using Config Server
+- Implemented Global Exception Handling
+- Added Logging, Distributed Tracing, and Monitoring
+- Dockerized all services using Docker Compose
 
-OpenFeign (Inter-service communication)
+---
 
-Resilience4j Circuit Breaker
+# 🧩 Microservices / Modules
 
-Spring Cloud Config
+1. Eureka Server – Service Registry
+2. API Gateway – Routing & Security
+3. Config Server – Centralized Configuration
+4. Student Service – Manage Students
+5. Course Service – Manage Courses
+6. Enrollment Service – Student Course Enrollment
+7. User Service – Manage Users
+8. Auth Service – Authentication & JWT
+9. Global Exception Handler
+10. Logging & Monitoring
 
-Logging & Monitoring
+---
 
-Spring Cloud Sleuth
+# 👤 User Service
 
-Zipkin
+Handles user management and roles.
 
-Prometheus
+## Features
+- Create User
+- Get User
+- Update User
+- Delete User
+- Role management (ADMIN / STUDENT)
+- Password encryption using BCrypt
 
-Grafana
+---
 
-DevOps
+# 🔐 Auth Service (JWT Authentication)
 
-Docker
+Handles authentication and JWT token generation.
 
-Docker Compose
+## Features
+- Login API
+- JWT Token Generation
+- Token Validation
+- Role-Based Authorization
+- Secure APIs via API Gateway
 
-🔄 System Flow
+---
 
-Client sends request to API Gateway
+# 🎓 Student Service
 
-API Gateway validates JWT Token
+Manages student information.
 
-Request routed to appropriate microservice
+## Features
+- Add Student
+- Update Student
+- Delete Student
+- Get Student Details
+- Fetch Student with Enrolled Courses (Feign Client)
 
-Services communicate using Feign Client
+---
 
-If service fails → Circuit Breaker fallback
+# 📚 Course Service
 
-Logs and traces sent to Zipkin
+Manages course information.
 
-Metrics monitored using Prometheus & Grafana
+## Features
+- Add Course
+- Update Course
+- Delete Course
+- Get Course Details
 
-📂 Project Structure
+---
+
+# 📝 Enrollment Service
+
+Manages student course enrollment.
+
+## Features
+- Enroll Student in Course
+- Get Student Enrollments
+- Communicates with Student & Course services via Feign Client
+- Circuit Breaker fallback if service unavailable
+
+---
+
+# 🔄 Microservices Communication Flow
+
+1. Client sends request → API Gateway  
+2. API Gateway validates JWT Token  
+3. Request routed to respective microservice  
+4. Services communicate using Feign Client  
+5. If service fails → Circuit Breaker fallback  
+6. Logs and traces sent to Zipkin  
+7. Metrics monitored via Prometheus & Grafana  
+
+---
+
+# ⚡ Microservices Components
+
+| Component | Purpose |
+|----------|---------|
+| Eureka Server | Service discovery |
+| API Gateway | Routing and security |
+| Config Server | Centralized configuration |
+| Feign Client | Inter-service communication |
+| Circuit Breaker | Fault tolerance |
+| JWT | Authentication |
+| Sleuth + Zipkin | Distributed tracing |
+| Prometheus + Grafana | Monitoring |
+| Docker | Containerization |
+
+---
+
+# 📂 Project Structure
 student-management-microservices
 │
 ├── eureka-server
@@ -95,94 +196,74 @@ student-management-microservices
 ├── auth-service
 ├── docker-compose.yml
 └── README.md
-🔐 Authentication Flow (JWT)
 
-User logs in via Auth Service
+# 🚀 How to Run the Project
 
-Auth Service validates user via User Service
+## Step 1 – Start Config Server
+## Step 2 – Start Eureka Server
+## Step 3 – Start All Microservices
+## Step 4 – Start API Gateway
+## Step 5 – Run Docker Compose
 
-JWT token generated
-
-Token sent in request header
-
-API Gateway validates token
-
-Request forwarded to microservices
-
-⚡ Features
-
-Microservices Architecture
-
-Service Discovery (Eureka)
-
-API Gateway Routing
-
-JWT Authentication
-
-Inter-service Communication (Feign)
-
-Circuit Breaker (Resilience4j)
-
-Centralized Configuration
-
-Global Exception Handling
-
-Logging & Distributed Tracing
-
-Monitoring with Prometheus & Grafana
-
-Dockerized Services
-
-Clean Architecture (Controller → Service → Repository)
-
-🚀 How to Run the Project
-1. Start Config Server
-2. Start Eureka Server
-3. Start All Microservices
-4. Start API Gateway
-5. Run using Docker Compose
 docker-compose up
-📡 API Endpoints (Example)
-Auth Service
+
+---
+
+# 📡 Sample API Endpoints
+
+## Auth Service
 POST /auth/login
 POST /auth/register
-Student Service
+
+
+## Student Service
+
 GET /students
 GET /students/{id}
 POST /students
 PUT /students/{id}
 DELETE /students/{id}
-Course Service
+
+
+## Course Service
+
 GET /courses
 POST /courses
-Enrollment Service
+
+
+## Enrollment Service
+
 POST /enrollments
 GET /enrollments/student/{id}
-💼 Resume Project Description
 
-Microservices Student Management System
 
-Developed a microservices-based system using Spring Boot and Spring Cloud
+---
 
-Implemented service discovery using Eureka and API Gateway routing
+# ✅ Validation & Exception Handling
 
-Secured APIs using JWT authentication and Spring Security
+- Request validation using annotations
+- Global exception handling using @ControllerAdvice
+- Standard error response structure across all services
 
-Enabled inter-service communication using OpenFeign
+---
 
-Implemented Circuit Breaker using Resilience4j for fault tolerance
+# 💼 Resume Project Description
 
-Used centralized configuration with Spring Cloud Config
+**Microservices Student Management System**
+- Developed a microservices-based system using Spring Boot and Spring Cloud
+- Implemented service discovery using Eureka and API Gateway routing
+- Secured APIs using JWT authentication and Spring Security
+- Enabled inter-service communication using OpenFeign
+- Implemented Circuit Breaker using Resilience4j for fault tolerance
+- Used centralized configuration with Spring Cloud Config
+- Implemented global exception handling and logging
+- Dockerized microservices using Docker Compose
 
-Implemented logging, distributed tracing, and monitoring
+---
 
-Dockerized all services using Docker Compose
+# 🙏 Thank You
 
-👨‍💻 Author
+Thank you for exploring this Student Management System Microservices Project.  
+This project demonstrates Microservices Architecture, Security, Distributed Systems, and Fault Tolerance, making it a production-style backend project for learning and interviews.
 
-Om Chaudhari
-Java Developer | Spring Boot | Microservices | AWS | Docker
-
-⭐ Conclusion
-
-This project demonstrates microservices architecture, security, fault tolerance, distributed tracing, and monitoring, making it a production-style backend system suitable for learning and interviews.
+Happy Coding! 🚀
