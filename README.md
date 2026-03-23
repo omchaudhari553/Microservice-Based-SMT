@@ -247,19 +247,6 @@ GET /enrollments/student/{id}
 
 ---
 
-# 💼 Resume Project Description
-
-**Microservices Student Management System**
-- Developed a microservices-based system using Spring Boot and Spring Cloud
-- Implemented service discovery using Eureka and API Gateway routing
-- Secured APIs using JWT authentication and Spring Security
-- Enabled inter-service communication using OpenFeign
-- Implemented Circuit Breaker using Resilience4j for fault tolerance
-- Used centralized configuration with Spring Cloud Config
-- Implemented global exception handling and logging
-- Dockerized microservices using Docker Compose
-
----
 
 # 🙏 Thank You
 
