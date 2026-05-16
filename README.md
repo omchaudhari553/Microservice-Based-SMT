@@ -1,256 +1,180 @@
-# 🎓 Student Management System (Spring Boot Microservices)
+<div align="center">
 
-<!-- BADGES START -->
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)
-![Spring Cloud](https://img.shields.io/badge/Spring%20Cloud-Microservices-green?style=for-the-badge)
-![Spring Security](https://img.shields.io/badge/Spring%20Security-JWT-6DB33F?style=for-the-badge)
-![JWT](https://img.shields.io/badge/JWT-Authentication-orange?style=for-the-badge)
-![MySQL](https://img.shields.io/badge/MySQL-Database-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-![Eureka](https://img.shields.io/badge/Eureka-Service%20Discovery-blue?style=for-the-badge)
-![Feign](https://img.shields.io/badge/OpenFeign-InterService-red?style=for-the-badge)
-![Resilience4j](https://img.shields.io/badge/Circuit%20Breaker-Resilience4j-yellow?style=for-the-badge)
-![Docker](https://img.shields.io/badge/Docker-Containerization-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-<!-- BADGES END -->
+# 🎓 Student Management System
 
----
+### Microservices-Based Student Management Platform
 
-# 📘 Project Overview
+A distributed student management application built using Spring Boot microservices architecture. The system manages student records, course enrollment, authentication, and inter-service communication with service discovery and fault tolerance support.
 
-The **Student Management System** is a scalable backend application built using **Java + Spring Boot Microservices** with a clean layered architecture.  
-This project demonstrates **service discovery, API gateway routing, inter-service communication, circuit breaker, centralized configuration, authentication, logging, and monitoring**.
+<br/>
 
-This system simulates a **real-world distributed microservices architecture** and showcases **secure authentication, fault tolerance, and service communication**, making it suitable for **Java Developer interviews and resume projects**.
+![Java](https://img.shields.io/badge/Java-17-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.x-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)
+![Spring Cloud](https://img.shields.io/badge/Spring_Cloud-Microservices-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![JWT](https://img.shields.io/badge/JWT-Security-000000?style=for-the-badge&logo=jsonwebtokens)
+![Docker](https://img.shields.io/badge/Docker-Containerized-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+
+</div>
 
 ---
 
-# 🧰 Technologies Used
+## 📌 Repository Description
 
-## Backend
-- Java
-- Spring Boot
-- Spring Data JPA
-- Hibernate
-- REST APIs
-
-## Microservices & Cloud
-- Spring Cloud
-- Eureka Service Discovery
-- Spring Cloud Gateway
-- OpenFeign (Inter-service communication)
-- Resilience4j Circuit Breaker
-- Spring Cloud Config Server
-
-## Security
-- Spring Security
-- JWT Authentication
-- Role-Based Access Control (ADMIN / STUDENT)
-
-## Database
-- MySQL
-
-## Logging & Monitoring
-- Spring Cloud Sleuth
-- Zipkin
-- Prometheus
-- Grafana
-
-## DevOps
-- Docker
-- Docker Compose
+Student Management System is a microservices-based backend application developed using Spring Boot and Spring Cloud. It enables secure student registration, course management, and service-to-service communication using Eureka discovery and OpenFeign. The project demonstrates enterprise-level microservice design with resilience and containerization.
 
 ---
 
-# 🎯 Key Highlights
+## ✨ Features
 
-- Built Microservices Architecture using Spring Boot & Spring Cloud
-- Implemented Service Discovery using Eureka
-- Configured API Gateway for routing
-- Implemented JWT-based authentication and role-based authorization
-- Used OpenFeign for inter-service communication
-- Implemented Circuit Breaker using Resilience4j
-- Used Centralized Configuration using Config Server
-- Implemented Global Exception Handling
-- Added Logging, Distributed Tracing, and Monitoring
-- Dockerized all services using Docker Compose
-
----
-
-# 🧩 Microservices / Modules
-
-1. Eureka Server – Service Registry
-2. API Gateway – Routing & Security
-3. Config Server – Centralized Configuration
-4. Student Service – Manage Students
-5. Course Service – Manage Courses
-6. Enrollment Service – Student Course Enrollment
-7. User Service – Manage Users
-8. Auth Service – Authentication & JWT
-9. Global Exception Handler
-10. Logging & Monitoring
+| Module | Description |
+|---|---|
+| 🔐 Authentication | Secure login and registration using JWT |
+| 👨‍🎓 Student Service | Manage student records and profiles |
+| 📚 Course Service | Manage courses and enrollments |
+| 🔍 Service Discovery | Eureka server for dynamic service registration |
+| 🔗 Inter-Service Communication | OpenFeign client |
+| 🛡 Fault Tolerance | Resilience4j circuit breaker |
+| 🐳 Containerization | Dockerized microservices |
+| 📖 API Documentation | Swagger UI |
 
 ---
 
-# 👤 User Service
+## 🛠 Tech Stack
 
-Handles user management and roles.
-
-## Features
-- Create User
-- Get User
-- Update User
-- Delete User
-- Role management (ADMIN / STUDENT)
-- Password encryption using BCrypt
-
----
-
-# 🔐 Auth Service (JWT Authentication)
-
-Handles authentication and JWT token generation.
-
-## Features
-- Login API
-- JWT Token Generation
-- Token Validation
-- Role-Based Authorization
-- Secure APIs via API Gateway
+| Layer | Technology |
+|---|---|
+| Core | Java 17, :contentReference[oaicite:6]{index=6} |
+| Microservices | :contentReference[oaicite:7]{index=7} |
+| Security | :contentReference[oaicite:8]{index=8}, JWT |
+| Database | :contentReference[oaicite:9]{index=9} |
+| Discovery | :contentReference[oaicite:10]{index=10} |
+| Communication | OpenFeign |
+| Resilience | Resilience4j |
+| DevOps | :contentReference[oaicite:11]{index=11} |
+| Build | Maven |
 
 ---
 
-# 🎓 Student Service
+## 📦 Microservices
 
-Manages student information.
-
-## Features
-- Add Student
-- Update Student
-- Delete Student
-- Get Student Details
-- Fetch Student with Enrolled Courses (Feign Client)
-
----
-
-# 📚 Course Service
-
-Manages course information.
-
-## Features
-- Add Course
-- Update Course
-- Delete Course
-- Get Course Details
+| Service | Port | Responsibility |
+|---|---|---|
+| API Gateway | 8080 | Entry point for all client requests |
+| Eureka Server | 8761 | Service registry |
+| Auth Service | 8081 | User authentication and JWT |
+| Student Service | 8082 | Student CRUD operations |
+| Course Service | 8083 | Course management |
+| Enrollment Service | 8084 | Student-course enrollment |
 
 ---
 
-# 📝 Enrollment Service
+## 🚀 Getting Started
 
-Manages student course enrollment.
+### Clone Repository
 
-## Features
-- Enroll Student in Course
-- Get Student Enrollments
-- Communicates with Student & Course services via Feign Client
-- Circuit Breaker fallback if service unavailable
-
----
-
-# 🔄 Microservices Communication Flow
-
-1. Client sends request → API Gateway  
-2. API Gateway validates JWT Token  
-3. Request routed to respective microservice  
-4. Services communicate using Feign Client  
-5. If service fails → Circuit Breaker fallback  
-6. Logs and traces sent to Zipkin  
-7. Metrics monitored via Prometheus & Grafana  
+```bash
+git clone https://github.com/your-username/student-management-system.git
+cd student-management-system
+```
 
 ---
 
-# ⚡ Microservices Components
+### Run Services
 
-| Component | Purpose |
-|----------|---------|
-| Eureka Server | Service discovery |
-| API Gateway | Routing and security |
-| Config Server | Centralized configuration |
-| Feign Client | Inter-service communication |
-| Circuit Breaker | Fault tolerance |
-| JWT | Authentication |
-| Sleuth + Zipkin | Distributed tracing |
-| Prometheus + Grafana | Monitoring |
-| Docker | Containerization |
-
----
-
-# 📂 Project Structure
-student-management-microservices
-│
-├── eureka-server
-├── api-gateway
-├── config-server
-├── student-service
-├── course-service
-├── enrollment-service
-├── user-service
-├── auth-service
-├── docker-compose.yml
-└── README.md
-
-# 🚀 How to Run the Project
-
-## Step 1 – Start Config Server
-## Step 2 – Start Eureka Server
-## Step 3 – Start All Microservices
-## Step 4 – Start API Gateway
-## Step 5 – Run Docker Compose
-
+```bash
+mvn clean install
 docker-compose up
+```
 
 ---
 
-# 📡 Sample API Endpoints
+## 🌐 Service URLs
 
-## Auth Service
-POST /auth/login
-POST /auth/register
-
-
-## Student Service
-
-GET /students
-GET /students/{id}
-POST /students
-PUT /students/{id}
-DELETE /students/{id}
-
-
-## Course Service
-
-GET /courses
-POST /courses
-
-
-## Enrollment Service
-
-POST /enrollments
-GET /enrollments/student/{id}
-
+| Service | URL |
+|---|---|
+| API Gateway | http://localhost:8080 |
+| Eureka Dashboard | http://localhost:8761 |
+| Auth Service Swagger | http://localhost:8081/swagger-ui.html |
+| Student Service Swagger | http://localhost:8082/swagger-ui.html |
 
 ---
 
-# ✅ Validation & Exception Handling
+## 🔐 Authentication
 
-- Request validation using annotations
-- Global exception handling using @ControllerAdvice
-- Standard error response structure across all services
+All APIs require JWT token except login/register.
+
+```http
+Authorization: Bearer <your_token>
+```
+
+### Endpoints
+
+#### Auth Service
+
+```bash
+POST /api/auth/register
+POST /api/auth/login
+```
+
+#### Student Service
+
+```bash
+GET    /api/students
+GET    /api/students/{id}
+POST   /api/students
+PUT    /api/students/{id}
+DELETE /api/students/{id}
+```
+
+#### Course Service
+
+```bash
+GET    /api/courses
+POST   /api/courses
+PUT    /api/courses/{id}
+DELETE /api/courses/{id}
+```
 
 ---
 
+## 🏗 Architecture
 
-# 🙏 Thank You
+- Microservices Architecture  
+- API Gateway Pattern  
+- Service Discovery Pattern  
+- Circuit Breaker Pattern  
+- REST Communication using OpenFeign  
+- Docker Containerization  
 
-Thank you for exploring this Student Management System Microservices Project.  
-This project demonstrates Microservices Architecture, Security, Distributed Systems, and Fault Tolerance, making it a production-style backend project for learning and interviews.
+---
 
-Happy Coding! 🚀
+## 🧪 Testing
+
+```bash
+mvn test
+```
+
+Includes:
+
+- Unit Testing  
+- Service Layer Testing  
+- API Testing  
+
+---
+
+## 📌 Future Enhancements
+
+- Kafka event-driven communication  
+- Redis caching  
+- Kubernetes deployment  
+- CI/CD pipeline integration  
+- Monitoring with Prometheus & Grafana  
+
+---
+
+## 👨‍💻 Author
+
+Developed by **Om Chaudhari** as a backend microservices project to demonstrate distributed systems, Spring Cloud, and secure API development.
+
+---
