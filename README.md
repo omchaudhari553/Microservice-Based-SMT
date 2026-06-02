@@ -43,15 +43,15 @@ Student Management System is a microservices-based backend application developed
 ## 🛠 Tech Stack
 
 | Layer | Technology |
-|---|---|
-| Core | Java 17, :contentReference[oaicite:6]{index=6} |
-| Microservices | :contentReference[oaicite:7]{index=7} |
-| Security | :contentReference[oaicite:8]{index=8}, JWT |
-| Database | :contentReference[oaicite:9]{index=9} |
-| Discovery | :contentReference[oaicite:10]{index=10} |
+|------|------------|
+| Core | Java 17 |
+| Microservices | Spring Boot, Spring Cloud |
+| Security | Spring Security, JWT |
+| Database | MySQL / PostgreSQL |
+| Discovery | Eureka Server (Spring Cloud Netflix) |
 | Communication | OpenFeign |
 | Resilience | Resilience4j |
-| DevOps | :contentReference[oaicite:11]{index=11} |
+| DevOps | Docker, Kubernetes |
 | Build | Maven |
 
 ---
